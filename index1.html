@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculator me</title>
+   <style type="text/css">
+    button {
+      margin-top: 10px;
+      margin-left: 10px;
+  background-color: rgb(48, 231, 118);
+  
+}
+    .tabel{
+     background-color: #d495aec3;
+     margin: 10px;
+     padding: 10px;
+    }
+   </style>
+   </head> 
+    <body>
+
+
+        <form name="calculator">
+         
+            <table class="tabel">
+                <caption>Calculator Sederhana</caption>
+        </div>
+        <br>
+        <div><td class="box-one">
+            <label for="number">Bilangan 1 :</label><br>
+            <input type="number" id="a" name="Bilangan 1"><br>
+        </td>
+    </div>
+    <tr>
+        <div>
+<td     class="box-two">
+            <label for="number">Bilangan 2 :</label><br>
+            <input type="number" id="b" name="Bilangan 2"><br>
+        </td>
+    </div>
+
+</tr>
+          <div>
+           <td colspan="3" align="center">
+            <button type="button" id="tambah">+</button>
+            <button type="button" id="kurang">-</button>
+            <button type="button" id="kali">*</button>
+            <button type="button" id="bagi">/</button>
+            <button type="reset" id="clear" onclick="fun()">C</button>
+           </td>
+          </div>
+          </tr>
+         </table>
+        </form>
+       
+        
+        <script>
+            document.getElementById("tambah").addEventListener("click", function () {
+  var a = document.getElementById("a").value;
+  var b = document.getElementById("b").value;
+  var hasil = Number(a) + Number(b);
+
+  alert("Hasil Penjumlahan = " + hasil);
+});
+
+document.getElementById("kurang").addEventListener("click", function () {
+  var a = document.getElementById("a").value;
+  var b = document.getElementById("b").value;
+  var hasil = Number(a) - Number(b);
+
+  alert("Hasil Pengurangan = " + hasil);
+});
+
+document.getElementById("kali").addEventListener("click", function () {
+  var a = document.getElementById("a").value;
+  var b = document.getElementById("b").value;
+  var hasil = Number(a) * Number(b);
+
+  alert("Hasil Perkalian = " + hasil);
+});
+
+document.getElementById("bagi").addEventListener("click", function () {
+  var a = document.getElementById("a").value;
+  var b = document.getElementById("b").value;
+  var hasil = Number(a) / Number(b);
+
+  alert("Hasil Pembagian = " + hasil);
+});
+
+function fun() {
+  document.getElementById("form").reset();
+}
+        </script>
+        
+        
+</body>
+</html>
